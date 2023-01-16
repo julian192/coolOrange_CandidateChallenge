@@ -10,13 +10,11 @@ namespace coolOrange_CandidateChallenge
     {
         public static bool IsPalindrome(string s)
         {
-            int l = s.Length;
-            for(int i = 0; i < l / 2; i++)
-            {
-                if (s[i] != s[l - i])
-                    return false;
-            }
-            return true;
+            if (s.Length == 0 || s.Length == 1)
+                return true;
+            if (s[0] != s[s.Length - 1])
+                return false;
+            return IsPalindrome(s.Substring(1, s.Length - 2));
         }
     }
 }

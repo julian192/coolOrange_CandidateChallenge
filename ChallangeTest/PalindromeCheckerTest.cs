@@ -1,7 +1,5 @@
-﻿using coolOrange_CandidateChallenge;
-using NUnit.Framework;
-
-namespace coolOrange_CandidateChallengeTest
+using coolOrange_CandidateChallenge;
+namespace ChallangeTest
 {
     [TestFixture]
     public class PalindromeCheckerTest

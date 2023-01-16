@@ -1,10 +1,9 @@
-﻿using coolOrange_CandidateChallenge;
-using NUnit.Framework;
+using coolOrange_CandidateChallenge;
 
-namespace coolOrange_CandidateChallengeTest
+namespace Test
 {
     [TestFixture]
-    public class PalindromeCheckerTest
+    public class UnitTest1
     {
         [Test]
         public void IsPalindrome_passing_empty_returns_true()

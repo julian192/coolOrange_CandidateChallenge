@@ -4,20 +4,31 @@ namespace coolOrange_CandidateChallenge
 {
     public class Task : IPriority, IComplexity, IComparable
     {
-        String name;
-        int priority;
-        int complexity;
+        private String name;
+        private Priority priority;
+        private int complexity;
         public Task(String name) 
+        {
+            this.name = name;
+            priority = Priority.MID_PRIORITY;
+        }
+
+        public String getName()
+        {
+            return name;
+        }
+
+        public void setName(String name)
         {
             this.name = name;
         }
 
-        public void setPriority(int priority)
+        public void setPriority(Priority priority)
         {
             this.priority = priority;
         }
 
-        public int getPriority()
+        public Priority getPriority()
         {
             return priority;
         }
@@ -34,12 +45,12 @@ namespace coolOrange_CandidateChallenge
 
         public int CompareTo(Task task)
         {
-            return this.priority - task.priority;
+            return ((int)this.priority) - ((int)task.priority);
         }
 
         public String toString()
         {
-            return name + " priotity: " + priority + " complexity: " + complexity;
+            return name + " priority: " + (int)priority + " complexity: " + complexity;
         }
     }
 }
